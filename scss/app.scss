@@ -1,0 +1,348 @@
+@import "settings";
+// @import "foundation";
+
+// Or selectively include components
+@import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+   "foundation/components/top-bar", 
+   "foundation/components/type",
+   "foundation/components/offcanvas";
+//   "foundation/components/visibility";
+
+
+$sidebar-width: 230px;
+$nav-color: #333;
+
+
+body {
+	color: #000;
+    cursor: auto;
+    font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+aside{
+	margin-top:56px;
+	padding-bottom: 6em; 
+}
+
+.inner-wrap {
+  width: auto;
+}
+
+.move-right .inner-wrap  {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  margin-left: $sidebar-width;
+}
+
+.offcanvas-overlap .left-off-canvas-menu, 
+.offcanvas-overlap .right-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  position: fixed;
+  width: $sidebar-width; 
+  height: 100%;
+  margin-top: 56px;
+  background-color: #DCDDE0;
+}
+
+.left-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  position: fixed;
+  width: 0;  
+  height: 100%;
+  margin-top: 56px;
+  background-color: #DCDDE0;
+}
+
+.move-right .left-off-canvas-menu {
+  width: $sidebar-width;
+}
+
+.move-right .exit-off-canvas {
+  display: none;
+}
+
+.left-off-canvas-toggle {
+  display: none;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 15px;
+  font-size: 2.5em;
+  transition: all .25s ease-in-out;
+  
+	a {  color: $white;
+		  &:focus {
+			color: $nav-color;
+		  }
+	}
+  &:hover {
+    color: lighten($nav-color, 35%);
+    transition: all .25s ease-in-out;
+  }
+}
+
+
+ul.off-canvas-list, ul.off-canvas-submenu {
+	text-transform: uppercase;
+	list-style: none;
+	
+	li{
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: 0.085em;
+    	color: #374B66;	
+		
+		a{
+		    padding: 1.05rem 2.375rem ;
+			color:#374B66 !important;
+			border-bottom: none !important;
+			
+			&:hover, &:focus{
+    			    background: #e0e0e0 !important;
+    				color: #5e7ea8;
+	
+			}
+			
+		}
+	}
+}
+
+ul.off-canvas-submenu {
+	margin: 0; padding: 0;
+	
+	li {
+		font-weight: normal;
+		color: #ddd;
+		text-decoration: underline;
+		text-transform: none;
+		
+		a {
+			padding: .2rem 2.375rem;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 641px) {
+
+  .top-bar-section ul li > a {
+    padding: 12px 24px 12px 0 !important;
+	text-align: right !important;
+ 	}
+
+}
+
+
+
+/*
+ * dashboard
+*/
+
+#dashboard .page-header {
+
+	border-bottom: 1px solid $gray-lighter;
+	padding: 0em 0 1em;
+
+	@media only screen and (min-width: $medium-breakpoint) {
+		padding: 2.5em 0 3em;
+	}
+
+	h1 {
+		font-size: 1.1em;
+		font-weight: 300;
+		letter-spacing: 0.08em;
+		width: 100%;
+
+		@media only screen and (min-width: $medium-breakpoint) {
+			font-size: 1.5em;
+		}
+
+		span {
+			color: $blue;
+			text-transform: none;
+		}
+	}
+
+	p {
+		margin-top: rem-calc(22);
+	}
+}
+
+.info {
+	text-align: center;
+	margin: 4em 0 0;
+
+	.data {
+		border: 4px solid $green;
+		border-radius: 100px;
+		display: inline-block;
+		padding: rem-calc(22 0);
+		width: 135px;
+		height: 135px;
+
+		.number {
+			font-size: rem-calc(48);
+			letter-spacing: rem-calc(1);
+			line-height: 58px;
+			color: $green;
+			font-weight: 600;
+		}
+
+		small {
+			display: block;
+			clear: both;
+		}
+	}
+
+	h2 {
+		font-weight: bold;
+		margin: .8em 0;
+		font-size: rem-calc(15);
+		text-transform: uppercase;
+
+		@media only screen and (min-width: $medium-breakpoint) {
+			margin: 2em 0;
+		}
+	}
+}
+
+.info-sales {
+
+	.data {
+		border-color: $blue;
+
+		.number {
+			color: $blue;
+			font-size: rem-calc(22);
+			letter-spacing: 0;
+		}
+	}
+}
+
+.info-pending {
+	.data {
+		border-color: $orange;
+
+		.number {
+			color: $orange;
+		}
+	}
+}
+
+/*
+ * visible
+*/
+.group-visible {
+	border: 1px solid $gray-lighter;
+	float: left;
+    width: 100%;
+    padding: 0 .8em;
+    margin-bottom: 2em;
+
+	label.visible {
+		margin: 1.8em 0 0;
+		float: left;
+	}
+}
+
+
+
+/*
+ * categories
+*/
+.group-categories {
+	margin: 2em 0 3em;
+
+	.top-categories {
+		border-bottom: 1px solid $gray-lighter;
+		padding-bottom: rem-calc(6);
+		float: left;
+		width: 100%;
+
+		> label {
+			@media only screen and (max-width: $medium-breakpoint) {
+				margin: rem-calc(7 0 0);
+			}
+		}
+	}
+
+	.product-categories ul {
+		margin: 0;
+		padding: 0;
+		clear: both;
+
+		li {
+			border-bottom: 1px solid $gray-lighter;
+			padding-top: rem-calc(10);
+		}
+
+	}
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem 0 1rem 1.625rem;
+    text-align: left;	
+	
+	#identity {
+		background: url(../images/spincom-logo.svg) no-repeat;
+		background-size: 100%;
+		width: 130px;
+		height: 30px;
+		display: inline-block;
+		margin: 0 auto;
+	}
+}
+

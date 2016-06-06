@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offcanvas Overlap</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body role="document">
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  
+<div class="fixed">
+<nav class="top-bar" data-topbar role="navigation">
+	
+	<!-- Left Nav Section -->
+	
+	
+  <ul class="title-area">
+	  
+	<ul class="left">
+	  <li><a class="left-off-canvas-toggle" href="#"><i class="fi-list"></i></a></li>
+	</ul> 
+	  
+    <li class="name">
+      <h1><a href="#">My Site</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	  <li class="toggle-topbar"><a href="#"><span>Usuario</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="#">Antonia Rojas</a>
+        <ul class="dropdown">
+          <li><a href="#">Mi cuenta</a></li>
+          <li><a href="#">Cerrar Sesión</a></li>
+        </ul>
+      </li>
+      <li class="active"><a href="#">Ver Tienda</a></li>
+	  </ul>
+
+
+  </section>
+</nav>	  
+</div>
+	  
+<div class="off-canvas-wrap move-right" data-offcanvas>
+  <div class="inner-wrap row">
+	 
+  <!-- Off Canvas Menu -->
+  <aside class="left-off-canvas-menu">
+
+      <ul class="off-canvas-list">
+        <li><a href="#">Tablero</a></li>
+        <li><a href="#">Órdenes</a></li>
+        <li><a href="#" class="off-canvas-submenu-call">Productos <span class="right"> + </span></a></li>
+			<ul class="off-canvas-submenu">
+				<li><a href="#">Todos los productos</a></li>
+				<li><a href="#">Categorías</a></li>
+			</ul>
+        <li><a href="#">Contenido</a></li>
+		<li><a href="#">Apariencia</a></li>
+
+        <li><a href="#" class="off-canvas-submenu-call">Preferencias <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Información general</a></li>
+								<li><a href="#">Despachos</a></li>
+							</ul>
+        <li><a href="#">Ayuda</a></li>
+
+      </ul>
+	  
+	  <footer>
+   <a title="por SpinCommerce" target="_blank" href="#" id="identity"></a>
+</footer>
+	  
+    </aside>
+	  
+  <div id="main-content" class="column medium-12 left small-screen-pad">
+          
+	<div id="dashboard">
+		<p class="info">Te quedan 97 días de prueba. <strong><a href="/subscription/new">Contrata tu plan ahora</a></strong></p>
+	<div class="page-header">
+		<div class="column large-6 small-screen-pad">
+	  		<h3>Bienvenido(a) al Administrador de tu Tienda: <span> clickyeah</span> </h3>
+		</div>
+
+		<div class="column large-6 small-screen-pad">
+	     <p>Encontrarás todas las opciones para administrar fácilmente tu tienda online, si tienes alguna duda revisa la sección de  <a class="button-simple" target="_blank" href="https://spincommerce.groovehq.com/help_center">Ayuda</a>.</p>
+	    </div>
+	</div>
+
+	<div class="clearfix">
+		<div class="column large-4 info info-products small-screen-pad">
+			<div class="data">
+				<span class="number">1</span>
+				<small>Productos</small>
+			</div>
+
+			<h2>Mis productos creados</h2>
+			<p>Esta es la cantidad de productos creados en tu tienda, agrega más productos para vender. Entra a la sección <strong>Productos</strong> para crear nuevos.</p>
+      <a class="button round i-arrow-right" href="/products">Ver productos</a>
+		</div>
+
+		<div class="column large-4 info info-sales small-screen-no-pad">
+			<div class="data">
+				<span class="number">$ 0.00</span>
+				<small>Ventas Totales</small>
+			</div>
+
+			<h2>Mis Ventas Totales</h2>
+			<p>Estas son las ventas totales de tu tienda, si quieres saber la cantidad de productos vendidos entra a la sección de <strong>Órdenes</strong> y revisa los productos pagados y despachados.</p>
+			<a class="button round i-arrow-right" href="/orders">Ver órdenes</a>
+		</div>
+
+		<div class="column large-4 info info-pending small-screen-pad">
+			<div class="data">
+				<span class="number">0</span>
+				<small>Pendientes</small>
+			</div>
+
+			<h2>Mis Órdenes Pendientes</h2>
+			<p>Estas son órdenes recibidas que están pendientes de ser pagadas por tus clientes. Entra ala sección de <strong>Órdenes</strong> para ver los estados de los pedidos.</p>
+			<a class="button round i-arrow-right" href="/orders?status=confirmed">Ver pendientes</a>
+		</div>
+
+	</div>
+</div>
+</div>
+	  
+
+    <!-- close the off-canvas menu -->
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+	  
+
+	  
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+<script src="js/app.js"></script>
+
+  </body>
+</html>
