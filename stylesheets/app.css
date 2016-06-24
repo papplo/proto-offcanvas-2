@@ -4570,49 +4570,55 @@ aside {
   transition: all .25s ease-in-out;
 }
 
-/* line 132, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 ul.off-canvas-list, ul.off-canvas-submenu {
   text-transform: uppercase;
   list-style: none;
 }
-/* line 136, ../scss/app.scss */
+/* line 135, ../scss/app.scss */
 ul.off-canvas-list li, ul.off-canvas-submenu li {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.085em;
   color: #374B66;
 }
-/* line 142, ../scss/app.scss */
+/* line 141, ../scss/app.scss */
+ul.off-canvas-list li.active > a:first-child:not(.button), ul.off-canvas-submenu li.active > a:first-child:not(.button) {
+  background: #eaeaec;
+  color: #5e7ea8;
+}
+/* line 146, ../scss/app.scss */
 ul.off-canvas-list li a, ul.off-canvas-submenu li a {
   padding: 1.05rem 2.375rem;
-  color: #374B66 !important;
+  color: #374B66;
   border-bottom: none !important;
 }
-/* line 147, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 ul.off-canvas-list li a:hover, ul.off-canvas-list li a:focus, ul.off-canvas-submenu li a:hover, ul.off-canvas-submenu li a:focus {
-  background: #e0e0e0 !important;
+  background: #eaeaec;
   color: #5e7ea8;
 }
 
-/* line 157, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 ul.off-canvas-submenu {
   margin: 0;
-  padding: 0;
+  padding: 0.5em 0;
+  background: #eaeaec;
 }
-/* line 160, ../scss/app.scss */
+/* line 165, ../scss/app.scss */
 ul.off-canvas-submenu li {
   font-weight: normal;
   color: #ddd;
-  text-decoration: underline;
+  text-decoration: none;
   text-transform: none;
 }
-/* line 166, ../scss/app.scss */
+/* line 171, ../scss/app.scss */
 ul.off-canvas-submenu li a {
-  padding: .2rem 2.375rem;
+  padding: .4rem 2.375rem;
 }
 
 @media only screen and (max-width: 641px) {
-  /* line 175, ../scss/app.scss */
+  /* line 180, ../scss/app.scss */
   .top-bar-section ul li > a {
     padding: 12px 24px 12px 0 !important;
     text-align: right !important;
@@ -4621,18 +4627,18 @@ ul.off-canvas-submenu li a {
 /*
  * dashboard
 */
-/* line 188, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 #dashboard .page-header {
   border-bottom: 1px solid #E9EAEC;
   padding: 0em 0 1em;
 }
 @media only screen and (min-width: 58.75rem) {
-  /* line 188, ../scss/app.scss */
+  /* line 193, ../scss/app.scss */
   #dashboard .page-header {
     padding: 2.5em 0 3em;
   }
 }
-/* line 197, ../scss/app.scss */
+/* line 202, ../scss/app.scss */
 #dashboard .page-header h1 {
   font-size: 1.1em;
   font-weight: 300;
@@ -4640,27 +4646,27 @@ ul.off-canvas-submenu li a {
   width: 100%;
 }
 @media only screen and (min-width: 58.75rem) {
-  /* line 197, ../scss/app.scss */
+  /* line 202, ../scss/app.scss */
   #dashboard .page-header h1 {
     font-size: 1.5em;
   }
 }
-/* line 207, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 #dashboard .page-header h1 span {
   color: #224099;
   text-transform: none;
 }
-/* line 213, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 #dashboard .page-header p {
   margin-top: 1.375rem;
 }
 
-/* line 218, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .info {
   text-align: center;
   margin: 4em 0 0;
 }
-/* line 222, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .info .data {
   border: 4px solid #51A66E;
   border-radius: 100px;
@@ -4669,7 +4675,7 @@ ul.off-canvas-submenu li a {
   width: 135px;
   height: 135px;
 }
-/* line 230, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .info .data .number {
   font-size: 3rem;
   letter-spacing: 0.0625rem;
@@ -4677,12 +4683,12 @@ ul.off-canvas-submenu li a {
   color: #51A66E;
   font-weight: 600;
 }
-/* line 238, ../scss/app.scss */
+/* line 243, ../scss/app.scss */
 .info .data small {
   display: block;
   clear: both;
 }
-/* line 244, ../scss/app.scss */
+/* line 249, ../scss/app.scss */
 .info h2 {
   font-weight: bold;
   margin: .8em 0;
@@ -4690,28 +4696,28 @@ ul.off-canvas-submenu li a {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 58.75rem) {
-  /* line 244, ../scss/app.scss */
+  /* line 249, ../scss/app.scss */
   .info h2 {
     margin: 2em 0;
   }
 }
 
-/* line 258, ../scss/app.scss */
+/* line 263, ../scss/app.scss */
 .info-sales .data {
   border-color: #224099;
 }
-/* line 261, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 .info-sales .data .number {
   color: #224099;
   font-size: 1.375rem;
   letter-spacing: 0;
 }
 
-/* line 270, ../scss/app.scss */
+/* line 275, ../scss/app.scss */
 .info-pending .data {
   border-color: #EF5F37;
 }
-/* line 273, ../scss/app.scss */
+/* line 278, ../scss/app.scss */
 .info-pending .data .number {
   color: #EF5F37;
 }
@@ -4719,7 +4725,7 @@ ul.off-canvas-submenu li a {
 /*
  * visible
 */
-/* line 282, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 .group-visible {
   border: 1px solid #E9EAEC;
   float: left;
@@ -4727,7 +4733,7 @@ ul.off-canvas-submenu li a {
   padding: 0 .8em;
   margin-bottom: 2em;
 }
-/* line 289, ../scss/app.scss */
+/* line 294, ../scss/app.scss */
 .group-visible label.visible {
   margin: 1.8em 0 0;
   float: left;
@@ -4736,11 +4742,11 @@ ul.off-canvas-submenu li a {
 /*
  * categories
 */
-/* line 300, ../scss/app.scss */
+/* line 305, ../scss/app.scss */
 .group-categories {
   margin: 2em 0 3em;
 }
-/* line 303, ../scss/app.scss */
+/* line 308, ../scss/app.scss */
 .group-categories .top-categories {
   border-bottom: 1px solid #E9EAEC;
   padding-bottom: 0.375rem;
@@ -4748,24 +4754,24 @@ ul.off-canvas-submenu li a {
   width: 100%;
 }
 @media only screen and (max-width: 58.75rem) {
-  /* line 309, ../scss/app.scss */
+  /* line 314, ../scss/app.scss */
   .group-categories .top-categories > label {
     margin: 0.4375rem 0 0;
   }
 }
-/* line 316, ../scss/app.scss */
+/* line 321, ../scss/app.scss */
 .group-categories .product-categories ul {
   margin: 0;
   padding: 0;
   clear: both;
 }
-/* line 321, ../scss/app.scss */
+/* line 326, ../scss/app.scss */
 .group-categories .product-categories ul li {
   border-bottom: 1px solid #E9EAEC;
   padding-top: 0.625rem;
 }
 
-/* line 330, ../scss/app.scss */
+/* line 335, ../scss/app.scss */
 footer {
   position: relative;
   bottom: 0;
@@ -4775,7 +4781,7 @@ footer {
   padding: 1rem 0 1rem 1.625rem;
   text-align: left;
 }
-/* line 339, ../scss/app.scss */
+/* line 344, ../scss/app.scss */
 footer #identity {
   background: url(../images/spincom-logo.svg) no-repeat;
   background-size: 100%;

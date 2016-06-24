@@ -128,7 +128,6 @@ aside{
   }
 }
 
-
 ul.off-canvas-list, ul.off-canvas-submenu {
 	text-transform: uppercase;
 	list-style: none;
@@ -138,16 +137,20 @@ ul.off-canvas-list, ul.off-canvas-submenu {
 		font-weight: bold;
 		letter-spacing: 0.085em;
     	color: #374B66;	
+	
+		&.active > a:first-child:not(.button){
+			background: lighten( #DCDDE0, 5% );
+			color: #5e7ea8;
+		}
 		
 		a{
 		    padding: 1.05rem 2.375rem ;
-			color:#374B66 !important;
+			color:$side-nav-link-color;
 			border-bottom: none !important;
 			
-			&:hover, &:focus{
-    			    background: #e0e0e0 !important;
+			&:hover, &:focus {
+    			    background: lighten( #DCDDE0, 5% );
     				color: #5e7ea8;
-	
 			}
 			
 		}
@@ -155,16 +158,18 @@ ul.off-canvas-list, ul.off-canvas-submenu {
 }
 
 ul.off-canvas-submenu {
-	margin: 0; padding: 0;
+	margin: 0; padding: 0.5em 0;
+    background: lighten( #DCDDE0, 5% );
+		
 	
 	li {
 		font-weight: normal;
 		color: #ddd;
-		text-decoration: underline;
+		text-decoration: none;
 		text-transform: none;
 		
 		a {
-			padding: .2rem 2.375rem;
+			padding: .4rem 2.375rem;
 		}
 	}
 }
@@ -345,4 +350,5 @@ footer {
 		margin: 0 auto;
 	}
 }
+
 
